@@ -2,58 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KuchuPuchu ❤️</title>
+  <title>KuchuPuchu Journey ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Floating Elements -->
-  <div class="hearts"></div>
-  <div class="stars"></div>
 
-  <!-- Title -->
-  <header>
-    <h1>KuchuPuchu 💞</h1>
-    <p>Tu meri duniya, meri jaan, mera sab kuch 💖</p>
-  </header>
+  <!-- Intro Screen -->
+  <div id="intro">
+    <h1>Hi My Love ❤️</h1>
+    <p>Are you ready for a surprise? 💕</p>
+    <button id="startBtn">Tap to Begin 💖</button>
+  </div>
 
-  <!-- Button -->
-  <button class="btn-love" id="loveBtn">Click for Surprise 🎉</button>
+  <!-- Main Content (hidden initially) -->
+  <div id="main" style="display:none;">
 
-  <!-- Love Journey Timeline -->
-  <section class="timeline">
-    <h2>💫 Our Love Journey 💫</h2>
-    <ul>
-      <li><strong>1st Meet:</strong> Tum meri life me aayi aur sab kuch badal gaya ❤️</li>
-      <li><strong>Special Day:</strong> Hamari pehli date, pehli baar haath pakadna ✨</li>
-      <li><strong>Endless Talks:</strong> Raat bhar baatein aur hasi mazak 💕</li>
-      <li><strong>Forever:</strong> Main hamesha tumhara rahunga 🥰</li>
-    </ul>
-  </section>
+    <!-- Slideshow -->
+    <section class="slideshow">
+      <h2>Our Memories 📸</h2>
+      <div class="slideshow-container">
+        <img src="images/pic1.jpg" class="slide active">
+        <img src="images/pic2.jpg" class="slide">
+        <img src="images/pic3.jpg" class="slide">
+        <img src="images/pic4.jpg" class="slide">
+      </div>
+    </section>
 
-  <!-- Secret Love Letter -->
-  <section class="letter">
-    <h2>💌 Secret Love Letter 💌</h2>
-    <button class="btn-reveal" id="revealBtn">Open Letter 📜</button>
-    <p id="secretText" class="hidden">
-      Mera pyara baby,  
-      Tum meri duniya ki sabse khoobsurat cheez ho.  
-      Main tumhe hamesha pyaar karunga — har pal, har din, har janam.  
-      I Love You So So Much 😘❤️
-    </p>
-  </section>
+    <!-- Timeline -->
+    <section class="timeline">
+      <h2>Our Journey ⏳</h2>
+      <ul>
+        <li><span>Day 1</span> — When we first met 💫</li>
+        <li><span>Day 30</span> — First long call till 3am 📞</li>
+        <li><span>Day 100</span> — First cute fight but more love ❤️</li>
+        <li><span>Forever</span> — You & Me till Infinity ♾️</li>
+      </ul>
+    </section>
 
-  <!-- Background Music -->
-  <audio autoplay loop id="bgMusic">
-    <source src="song.mpeg" type="audio/mpeg">
-  </audio>
+    <!-- Love Letter -->
+    <section class="letter">
+      <h2>Letter For You 💌</h2>
+      <p>
+        My Love,<br><br>
+        Every day with you feels like magic ✨.  
+        You are my happiness, my safe place, and my forever.  
+        I promise to love you, care for you, and make you smile — always 💕.  
+        You are my KuchuPuchu, my jaan, my everything.  
+        <br><br>
+        Yours Forever ❤️
+      </p>
+    </section>
 
-  <!-- Confetti -->
+    <!-- Final Surprise -->
+    <section class="final">
+      <h2>I Love You Forever 💖</h2>
+      <button id="surpriseBtn">Click for Surprise 🎉</button>
+    </section>
+
+  </div>
+
+  <!-- Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-  <!-- Custom Script -->
   <script src="script.js"></script>
 </body>
 </html>
