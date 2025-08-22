@@ -1,0 +1,107 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+
+/* Header */
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4em;
+  margin-top: 50px;
+  text-shadow: 0 0 20px rgba(255, 0, 90, 0.7);
+}
+header p { font-size: 1.3em; }
+
+/* Button */
+.btn-love, .btn-reveal {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1em;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.4);
+  transition: transform 0.3s ease;
+}
+.btn-love:hover, .btn-reveal:hover { transform: scale(1.1); }
+
+/* Timeline */
+.timeline {
+  margin: 50px auto;
+  max-width: 600px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.timeline h2 { margin-bottom: 20px; }
+.timeline ul { list-style: none; padding: 0; }
+.timeline li {
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+/* Secret Letter */
+.letter {
+  margin: 40px auto;
+  max-width: 600px;
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.hidden { display: none; }
+#secretText {
+  margin-top: 20px;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+/* Floating Hearts */
+.hearts, .stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.heart {
+  position: absolute;
+  bottom: -50px;
+  color: rgba(255,0,90,0.7);
+  font-size: 20px;
+  animation: rise 8s linear infinite;
+}
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+}
+
+/* Floating Stars */
+.star {
+  position: absolute;
+  top: -10px;
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+  animation: fall 6s linear infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
