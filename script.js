@@ -1,42 +1,25 @@
-// Confetti on main button
-document.getElementById("loveBtn").addEventListener("click", () => {
+// Intro Start
+document.getElementById("startBtn").addEventListener("click", () => {
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("main").style.display = "block";
+});
+
+// Slideshow Auto-play
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+function showSlides() {
+  slides.forEach((slide, i) => slide.classList.remove("active"));
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}
+setInterval(showSlides, 3000); // every 3 sec
+
+// Final Surprise Confetti
+document.getElementById("surpriseBtn").addEventListener("click", () => {
   confetti({
-    particleCount: 200,
+    particleCount: 300,
     spread: 120,
     origin: { y: 0.7 }
   });
-  alert("I Love You So Much 😘💖 — Your Baby ❤️");
+  alert("Forever Yours ❤️ KuchuPuchu 💕");
 });
-
-// Secret Letter Reveal
-document.getElementById("revealBtn").addEventListener("click", () => {
-  document.getElementById("secretText").classList.toggle("hidden");
-});
-
-// Floating Hearts
-const heartsContainer = document.querySelector('.hearts');
-function createHeart() {
-  const heart = document.createElement('div');
-  heart.classList.add('heart');
-  heart.innerHTML = '❤️';
-  heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.fontSize = Math.random() * 20 + 15 + 'px';
-  heart.style.animationDuration = (6 + Math.random() * 4) + 's';
-  heartsContainer.appendChild(heart);
-  setTimeout(() => { heart.remove(); }, 10000);
-}
-setInterval(createHeart, 500);
-
-// Floating Stars
-const starsContainer = document.querySelector('.stars');
-function createStar() {
-  const star = document.createElement('div');
-  star.classList.add('star');
-  star.innerHTML = '✨';
-  star.style.left = Math.random() * 100 + 'vw';
-  star.style.fontSize = Math.random() * 10 + 10 + 'px';
-  star.style.animationDuration = (4 + Math.random() * 4) + 's';
-  starsContainer.appendChild(star);
-  setTimeout(() => { star.remove(); }, 7000);
-}
-setInterval(createStar, 800);
